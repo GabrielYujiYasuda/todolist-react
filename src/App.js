@@ -1,35 +1,41 @@
-import logo from "./logo.svg";
 import "./App.css";
+import TodoTable from "./components/TodoTable";
 
 function App() {
+  const todos = [
+    { rowNumber: 1, rowDescription: "Feed pupy", rowAssigned: "User Nne" },
+    { rowNumber: 2, rowDescription: "Water plants", rowAssigned: "User Two" },
+    { rowNumber: 3, rowDescription: "Make dinner", rowAssigned: "User Three" },
+    {
+      rowNumber: 4,
+      rowDescription: "Charge phone battery",
+      rowAssigned: "User Four",
+    },
+  ];
+
+  const addTodo = () => {
+    if (todos.length > 0) {
+      const newTodo = {
+        rowNumber: todos.length + 1,
+        rowDescription: "New Todo",
+        rowAssigned: "User Three",
+      };
+
+      todos.push(newTodo);
+      console.log(todos);
+    }
+  };
+
   return (
-    <div>
-      <div>
-        <div>Your Todo's</div>
-
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Description</th>
-              <th scope="col">Assigned</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <th>Feed Dog</th>
-              <th>Eric</th>
-            </tr>
-
-            <tr>
-              <th scope="row">2</th>
-              <th>Get haircut</th>
-              <th>Eric</th>
-            </tr>
-          </tbody>
-        </table>
+    <div className="mt-5 container">
+      <div className="card">
+        <div className="card-header">Your Todo's</div>
+        <div className="card-body">
+          <TodoTable todos={todos} />
+          <button className="btn btn-primary" type="button" onClick={addTodo}>
+            Add new todo
+          </button>
+        </div>
       </div>
     </div>
   );
