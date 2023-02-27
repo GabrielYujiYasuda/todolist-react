@@ -40,7 +40,7 @@ function NewTodoForm() {
         </div>
 
         <button type="button" className="btn btn-primary mt-3">
-          Add New Todo
+          Add Todo
         </button>
       </form>
     </div>
