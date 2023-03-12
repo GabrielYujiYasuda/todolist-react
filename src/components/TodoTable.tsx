@@ -1,3 +1,4 @@
+import React from "react";
 import TodoRowItem from "./TodoRowItem";
 
 function TodoTable(props) {
@@ -12,7 +13,7 @@ function TodoTable(props) {
       </thead>
 
       <tbody>
-        {props.todos.map((todo) => (
+        {props.todos.map((todo: ) => (
           <TodoRowItem
             key={todo.rowNumber}
             rowNumber={todo.rowNumber}
