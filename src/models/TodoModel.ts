@@ -8,11 +8,4 @@ class TodoModel {
     this.rowDescription = rowDescription;
     this.rowAssigned = rowAssigned;
   }
-
-  //   get rowNumber(): number {
-  //     return this.rowNumber;
-  //   }
-  //   set rowNmber(rowNumber: number) {
-  //     this.rowNumber = rowNumber;
-  //   }
 }
